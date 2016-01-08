@@ -91,6 +91,9 @@ package testtd.model.tower
 		 */
 		public function inRange(creep:Creep):Boolean
 		{
+			// checking if creep is within tower's radius with formula:
+			// (x-h)^2 / a^2 + (y-k)^2 / b^2 <= 1 for finding point inside ellipse
+			
 			// coordinates of the creep
 			const _x:int = creep.targetOffset.x;
 			const _y:int = creep.targetOffset.y;
